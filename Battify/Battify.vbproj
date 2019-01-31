@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B40C457-673C-49C6-9BF9-35B3BC5EBF27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Battify.My.MyApplication</StartupObject>
+    <RootNamespace>Battify</RootNamespace>
+    <AssemblyName>Battify</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Battify.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Battify.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm.Designer.vb">
+      <DependentUpon>PopupForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIEffect.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PowerChk.vb" />
+    <Compile Include="TrayForm.Designer.vb">
+      <DependentUpon>TrayForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrayForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PopupForm.resx">
+      <DependentUpon>PopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayForm.resx">
+      <DependentUpon>TrayForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\0.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\7.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\10.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\12.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\13.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\14.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\15.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\17.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\18.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\19.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\20.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\21.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\22.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\23.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\25.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\26.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\27.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\28.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\30.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\31.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\33.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\34.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\35.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\36.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\37.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\38.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\39.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\40.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\41.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\42.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\43.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\44.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\45.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\46.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\47.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\49.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\50.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\51.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\52.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\53.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\54.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\55.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\56.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\57.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\58.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\59.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\60.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\61.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\62.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\63.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\65.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\66.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\67.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\68.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\69.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\70.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\71.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\72.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\73.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\74.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\75.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\76.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\77.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\78.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\79.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\80.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\81.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\82.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\83.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\84.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\85.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\86.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\87.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\88.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\89.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\90.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\91.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\92.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\93.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\94.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\95.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\96.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\97.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\98.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\99.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\100.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg_charge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg_no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg_usinge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batt_bg_warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plug.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
