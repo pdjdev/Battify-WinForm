@@ -95,11 +95,22 @@
 
 
         If Not preNotifyType = nowNotifyType Then
+
             ShowPopup()
             preNotifyType = nowNotifyType
+
         End If
 
-        If Not prePercent = nowPercent Then DrawTray(nowPercent)
+        If Not prePercent = nowPercent Then
+
+            If nowNotifyType = "nobat" Or nowNotifyType = "unknow" Then
+                DrawTray(-1)
+            Else
+                DrawTray(nowPercent)
+            End If
+
+
+        End If
 
         prePowerType = nowPowerType
         prePercent = nowPercent
@@ -190,9 +201,11 @@
     End Sub
 
     Sub DrawTray(percent As Integer)
-
         If percent >= 0 And percent <= 100 Then
             NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_" + percent.ToString)
+            NotifyIcon1.Visible = True
+        Else
+            NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_0")
             NotifyIcon1.Visible = True
         End If
     End Sub
@@ -207,5 +220,9 @@
 
     Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
 
+    End Sub
+
+    Private Sub TrayForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Me.Hide()
     End Sub
 End Class
