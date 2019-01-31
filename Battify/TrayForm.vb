@@ -99,7 +99,7 @@
             preNotifyType = nowNotifyType
         End If
 
-        DrawTray(nowPercent)
+        If Not prePercent = nowPercent Then DrawTray(nowPercent)
 
         prePowerType = nowPowerType
         prePercent = nowPercent
