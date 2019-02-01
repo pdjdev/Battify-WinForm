@@ -1,16 +1,20 @@
-﻿Public Class TrayForm
+﻿Imports System.ComponentModel
+
+Public Class TrayForm
     Public ChargePlugged As Boolean = False
+    Dim popupMargin As Integer = 20
 
     Dim nowPowerType As Integer
     Dim nowPercent As Integer
-    Dim nowPlugged As Boolean
 
-    Dim prePowerType As Integer
+    Dim prePowerType As Integer = -1
     Dim prePercent As Integer
     Dim prePlugged As Boolean
 
     Dim nowNotifyType As String = ""
     Dim preNotifyType As String = ""
+
+
 
     Private Sub TrayForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -19,37 +23,44 @@
 
     Private Sub EventCheck_Tick(sender As Object, e As EventArgs) Handles EventCheck.Tick
 
+        '상황표시 폼이 있으면 디버그 모드 진입
+        Dim debugmode As Boolean = Application.OpenForms().OfType(Of statusform).Any
+
         nowPowerType = CheckType()
         nowPercent = Checkbatt()
+
+        If debugmode Then statusform.Label1.Text = "nowPowerType: " + nowPowerType.ToString + vbCr + "prePowerType: " + prePowerType.ToString
+
+        '파워타이프 종류:
+        '배터리 없음 - 128
+        '알 수 없음 - 255
+        '충전중 - 8, 9
+        '충전 중이 아님(사용중) - 0, 1, 2, 4
+
 
         If nowPowerType = BatteryChargeStatus.NoSystemBattery Then
             '배터리 없음
             nowNotifyType = "nobat"
-            nowPlugged = True
         ElseIf nowPowerType = BatteryChargeStatus.Unknown Then
             '알수 없음
             nowNotifyType = "unknow"
-            nowPlugged = False
-        ElseIf nowPowerType = 8 Or nowPowerType = 9 Then
-            '충전 중
-            nowNotifyType = "charg"
-            nowPlugged = True
-        Else
-            '충전 중이 아님(사용중)
-            nowNotifyType = "using"
-            nowPlugged = False
         End If
 
 
 
-        If nowNotifyType = "using" Then
+        If nowPowerType = 0 Or nowPowerType = 1 Or nowPowerType = 2 Or nowPowerType = 4 Then
+
+            nowNotifyType = "using"
 
             '충전 중이었다가 빡 뺐을때
             If prePowerType = 8 Or prePowerType = 9 Then
+
                 nowNotifyType = "unplug"
 
             Else
                 '걍 사용중
+
+
                 Select Case nowPercent
                     Case < 5 '5퍼 이하
                         nowNotifyType = "5left"
@@ -68,10 +79,17 @@
 
                 End Select
 
+                If Application.OpenForms().OfType(Of PopupForm).Any Then
+                    '팝업 켜져있을시 이거는 걍 싸그리 무시 (이전알림을 업데이트함으로써)
+                    preNotifyType = nowNotifyType
+                End If
+
 
             End If
 
-        ElseIf nowNotifyType = "charg" Then
+        ElseIf nowPowerType = 8 Or nowPowerType = 9 Then
+
+            nowNotifyType = "charg"
 
             '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
             If prePowerType = 8 Or prePowerType = 9 Then
@@ -84,6 +102,7 @@
                         nowNotifyType = "100charge"
 
                 End Select
+
             Else '빡 꽂은거 맞음 근데
 
                 If nowPercent = 100 Then nowNotifyType = "100charge"
@@ -92,7 +111,7 @@
 
         End If
 
-
+        If debugmode Then statusform.Label2.Text = nowNotifyType + "/" + preNotifyType
 
         If Not preNotifyType = nowNotifyType Then
 
@@ -145,7 +164,7 @@
 
             Case "5left"
                 first_str = nowPercent
-                second_str = "배터리 부족"
+                second_str = "배터리 매우 부족"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_warn
 
             Case "15left"
@@ -165,7 +184,7 @@
 
             Case "50left"
                 first_str = nowPercent
-                second_str = "반이 남아있음"
+                second_str = "반 이하 남음"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_usinge
 
             Case "50charge"
@@ -192,7 +211,7 @@
             .isPopupMode = True
         End With
 
-        Dim marign As Integer = dpicalc(Me, 10)
+        Dim marign As Integer = dpicalc(Me, popupMargin)
 
         Dim showx = Screen.PrimaryScreen.WorkingArea.Width - PopupForm.Width - marign
         Dim showy = Screen.PrimaryScreen.WorkingArea.Height - PopupForm.Height - marign
@@ -224,5 +243,14 @@
 
     Private Sub TrayForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Me.Hide()
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        statusform.Show()
+    End Sub
+
+    Private Sub TrayForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        NotifyIcon1.Icon = Nothing
+        NotifyIcon1.Visible = False
     End Sub
 End Class

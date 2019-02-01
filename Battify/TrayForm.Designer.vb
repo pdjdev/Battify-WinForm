@@ -28,6 +28,7 @@ Partial Class TrayForm
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.팝업표시ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.종료ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,12 +46,12 @@ Partial Class TrayForm
         '
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip1.Font = New System.Drawing.Font("맑은 고딕", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.팝업표시ToolStripMenuItem, Me.종료ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.팝업표시ToolStripMenuItem, Me.종료ToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ContextMenuStrip1.ShowImageMargin = False
         Me.ContextMenuStrip1.ShowItemToolTips = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(156, 78)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(139, 82)
         '
         '팝업표시ToolStripMenuItem
         '
@@ -63,6 +64,12 @@ Partial Class TrayForm
         Me.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem"
         Me.종료ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.종료ToolStripMenuItem.Text = "종료"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(155, 26)
+        Me.ToolStripMenuItem1.Text = "StatusForm"
         '
         'TrayForm
         '
@@ -88,4 +95,5 @@ Partial Class TrayForm
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents 팝업표시ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 종료ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -46,7 +46,7 @@ Public Class PopupForm
     Sub ModeSwitcher()
         If ispercent Then
             ispercent = False
-            MainLabel.Font = New Font("맑은 고딕 Semilight", 16.0!)
+            MainLabel.Font = New Font("맑은 고딕 Semilight", 14.0!)
             MainLabel.Text = nextstr
 
         Else
