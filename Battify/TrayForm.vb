@@ -45,7 +45,7 @@
         If nowNotifyType = "using" Then
 
             '충전 중이었다가 빡 뺐을때
-            If preNotifyType = "charg" Then
+            If prePowerType = 8 Or prePowerType = 9 Then
                 nowNotifyType = "unplug"
 
             Else
@@ -73,8 +73,8 @@
 
         ElseIf nowNotifyType = "charg" Then
 
-            '안꽂았다가 빡 꽂았을때-가 아닐때
-            If Not preNotifyType = "using" Then
+            '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
+            If prePowerType = 8 Or prePowerType = 9 Then
 
                 Select Case nowPercent
                     Case 50
