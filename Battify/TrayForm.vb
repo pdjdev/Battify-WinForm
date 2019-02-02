@@ -53,7 +53,7 @@ Public Class TrayForm
             nowNotifyType = "using"
 
             '충전 중이었다가 빡 뺐을때
-            If 8 <= prePowerType <= 10 Then
+            If 8 <= prePowerType And prePowerType <= 10 Then
 
                 nowNotifyType = "unplug"
 
@@ -87,12 +87,12 @@ Public Class TrayForm
 
             End If
 
-        ElseIf 8 <= nowPowerType <= 10 Then
+        ElseIf 8 <= nowPowerType And nowPowerType <= 10 Then
 
             nowNotifyType = "charg"
 
             '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
-            If 8 <= prePowerType <= 10 Then
+            If 8 <= prePowerType And prePowerType <= 10 Then
 
                 Select Case nowPercent
                     Case 50
