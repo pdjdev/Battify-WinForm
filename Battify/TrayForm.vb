@@ -34,7 +34,7 @@ Public Class TrayForm
         '파워타이프 종류:
         '배터리 없음 - 128
         '알 수 없음 - 255
-        '충전중 - 8, 9
+        '충전중 - 8, 9, 10
         '충전 중이 아님(사용중) - 0, 1, 2, 4
 
 
@@ -53,7 +53,7 @@ Public Class TrayForm
             nowNotifyType = "using"
 
             '충전 중이었다가 빡 뺐을때
-            If prePowerType = 8 Or prePowerType = 9 Then
+            If 8 <= prePowerType <= 10 Then
 
                 nowNotifyType = "unplug"
 
@@ -87,12 +87,12 @@ Public Class TrayForm
 
             End If
 
-        ElseIf nowPowerType = 8 Or nowPowerType = 9 Then
+        ElseIf 8 <= nowPowerType <= 10 Then
 
             nowNotifyType = "charg"
 
             '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
-            If prePowerType = 8 Or prePowerType = 9 Then
+            If 8 <= prePowerType <= 10 Then
 
                 Select Case nowPercent
                     Case 50
@@ -209,6 +209,7 @@ Public Class TrayForm
             .curPercent = first_str
             .nextstr = second_str
             .isPopupMode = True
+            .TopMost = True
         End With
 
         Dim marign As Integer = dpicalc(Me, popupMargin)
