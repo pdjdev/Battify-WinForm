@@ -1240,6 +1240,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property icon() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icon", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
         Friend ReadOnly Property plug() As System.IO.UnmanagedMemoryStream

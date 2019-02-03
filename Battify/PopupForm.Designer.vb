@@ -37,11 +37,11 @@ Partial Class PopupForm
         '
         Me.MainLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainLabel.Font = New System.Drawing.Font("Segoe UI Semilight", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MainLabel.Location = New System.Drawing.Point(56, 0)
+        Me.MainLabel.Location = New System.Drawing.Point(70, 0)
         Me.MainLabel.Margin = New System.Windows.Forms.Padding(0)
         Me.MainLabel.Name = "MainLabel"
         Me.MainLabel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
-        Me.MainLabel.Size = New System.Drawing.Size(158, 66)
+        Me.MainLabel.Size = New System.Drawing.Size(180, 80)
         Me.MainLabel.TabIndex = 1
         Me.MainLabel.Text = "100%"
         Me.MainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -53,7 +53,7 @@ Partial Class PopupForm
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(10, 10, 0, 10)
-        Me.Panel1.Size = New System.Drawing.Size(56, 66)
+        Me.Panel1.Size = New System.Drawing.Size(70, 80)
         Me.Panel1.TabIndex = 2
         '
         'BattImg
@@ -64,7 +64,7 @@ Partial Class PopupForm
         Me.BattImg.Image = Global.Battify.My.Resources.Resources.fill_100
         Me.BattImg.Location = New System.Drawing.Point(10, 10)
         Me.BattImg.Name = "BattImg"
-        Me.BattImg.Size = New System.Drawing.Size(46, 46)
+        Me.BattImg.Size = New System.Drawing.Size(60, 60)
         Me.BattImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BattImg.TabIndex = 0
         Me.BattImg.TabStop = False
@@ -86,12 +86,13 @@ Partial Class PopupForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(214, 66)
+        Me.ClientSize = New System.Drawing.Size(250, 80)
         Me.Controls.Add(Me.MainLabel)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("맑은 고딕", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = Global.Battify.My.Resources.Resources.icon
         Me.Name = "PopupForm"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual

@@ -58,6 +58,7 @@ Partial Class statusform
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "statusform"
         Me.Text = "statusform"
+        Me.Icon = My.Resources.icon
         Me.ResumeLayout(False)
 
     End Sub

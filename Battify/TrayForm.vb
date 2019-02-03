@@ -1,9 +1,6 @@
 ﻿Imports System.ComponentModel
 
 Public Class TrayForm
-    Public ChargePlugged As Boolean = False
-    Dim popupMargin As Integer = 20
-
     Dim nowPowerType As Integer
     Dim nowPercent As Integer
 
@@ -155,7 +152,7 @@ Public Class TrayForm
                 first_str = nowPercent
                 second_str = "충전 중"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
-                My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
+                If Not My.Settings.mute Then  My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
 
             Case "unplug"
                 first_str = nowPercent
@@ -196,7 +193,7 @@ Public Class TrayForm
                 first_str = nowPercent
                 second_str = "충전 완료"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_full
-                My.Computer.Audio.Play(My.Resources.full, AudioPlayMode.Background)
+                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.full, AudioPlayMode.Background)
 
             Case "using"
                 first_str = nowPercent
@@ -212,11 +209,6 @@ Public Class TrayForm
             .TopMost = True
         End With
 
-        Dim marign As Integer = dpicalc(Me, popupMargin)
-
-        Dim showx = Screen.PrimaryScreen.WorkingArea.Width - PopupForm.Width - marign
-        Dim showy = Screen.PrimaryScreen.WorkingArea.Height - PopupForm.Height - marign
-        PopupForm.SetDesktopLocation(showx, showy)
         PopupForm.Show()
     End Sub
 
@@ -239,7 +231,11 @@ Public Class TrayForm
     End Sub
 
     Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
-
+        If Not My.Settings.mute Then
+            MutesoundToolStripMenuItem.Text = "음소거"
+        Else
+            MutesoundToolStripMenuItem.Text = "알림 소리 활성화"
+        End If
     End Sub
 
     Private Sub TrayForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
@@ -253,5 +249,17 @@ Public Class TrayForm
     Private Sub TrayForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         NotifyIcon1.Icon = Nothing
         NotifyIcon1.Visible = False
+    End Sub
+
+    Private Sub MutesoundToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MutesoundToolStripMenuItem.Click
+        My.Settings.mute = Not My.Settings.mute
+        My.Settings.Save()
+        My.Settings.Reload()
+
+        If Not My.Settings.mute Then
+            MutesoundToolStripMenuItem.Text = "음소거"
+        Else
+            MutesoundToolStripMenuItem.Text = "알림 소리 활성화"
+        End If
     End Sub
 End Class

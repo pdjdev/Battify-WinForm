@@ -6,6 +6,9 @@ Public Class PopupForm
     Public nextstr As String = Nothing
     Dim ispercent As Boolean = True
 
+    Dim zoomfactor As Single = 1.0!
+    Dim popupMargin As Integer = 20
+
     Public isPopupMode As Boolean = False
     Dim modeCount As Integer = 0 '0 = 처음 텍스트 전환 / 1 = 화면 끄기
 
@@ -46,7 +49,7 @@ Public Class PopupForm
     Sub ModeSwitcher()
         If ispercent Then
             ispercent = False
-            MainLabel.Font = New Font("맑은 고딕 Semilight", 14.0!)
+            MainLabel.Font = New Font("맑은 고딕 Semilight", 14.0! * zoomfactor)
             MainLabel.Text = nextstr
 
         Else
@@ -103,6 +106,14 @@ Public Class PopupForm
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Opacity = 0
+        ZoomForm(Me, zoomfactor, False)
+
+        Dim marign As Integer = dpicalc(Me, popupMargin)
+
+        Dim showx = Screen.PrimaryScreen.WorkingArea.Width - Width - marign
+        Dim showy = Screen.PrimaryScreen.WorkingArea.Height - Height - marign
+        SetDesktopLocation(showx, showy)
+
         MainLabel.Text = curPercent + "%"
         BattDrawer()
     End Sub

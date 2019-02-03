@@ -76,5 +76,76 @@ Module GUIEffect
     End Sub
 #End Region
 
+#Region "컨트롤 조정"
+    '참조 코드:http://justsomevbcode.blogspot.com/2011/06/how-to-find-all-child-controls-from.html
+    'by Adam Zuckerman
+
+    ''' <summary>
+    ''' 재귀적으로 폼에 있는 모든 컨트롤을 탐색합니다
+    ''' </summary>
+    <System.Runtime.CompilerServices.Extension()>
+    Public Function FindAllChildren(ByRef StartingContainer As System.Windows.Forms.Form) As List(Of System.Windows.Forms.Control)
+        Dim Children As New List(Of System.Windows.Forms.Control)
+
+        Dim oControl As System.Windows.Forms.Control
+        For Each oControl In StartingContainer.Controls
+            Children.Add(oControl)
+            If oControl.HasChildren Then
+                Children.AddRange(oControl.FindAllChildren())
+            End If
+        Next
+
+        Return Children
+    End Function
+
+    ''' <summary>
+    ''' 컨트롤의 모든 컨트롤을 탐색합니다
+    ''' </summary>
+    <System.Runtime.CompilerServices.Extension()>
+    Public Function FindAllChildren(ByRef StartingContainer As System.Windows.Forms.Control) As List(Of System.Windows.Forms.Control)
+        Dim Children As New List(Of System.Windows.Forms.Control)
+
+        If StartingContainer.HasChildren = False Then
+            Return Nothing
+        Else
+            Dim oControl As System.Windows.Forms.Control
+            For Each oControl In StartingContainer.Controls
+                Children.Add(oControl)
+                If oControl.HasChildren Then
+                    Children.AddRange(oControl.FindAllChildren())
+                End If
+            Next
+        End If
+
+        Return Children
+    End Function
+
+    ''' <summary>
+    ''' 폼을 확대합니다
+    ''' </summary>
+    ''' <param name="Form">대상 폼</param>
+    ''' <param name="ZoomFactor">확대 배수</param>
+    ''' <param name="Refresh">Refresh 여부</param>
+    Public Sub ZoomForm(Form As Form, ZoomFactor As Double, Refresh As Boolean)
+
+        Form.Width *= ZoomFactor
+        Form.Height *= ZoomFactor
+
+        For Each c As Control In Form.FindAllChildren
+            c.Width *= ZoomFactor
+            c.Height *= ZoomFactor
+            c.Location = New Point(c.Location.X * 2, c.Location.Y * 2)
+
+            Try
+                c.Font = New System.Drawing.Font(c.Font.Name, c.Font.Size * ZoomFactor, c.Font.Style, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Catch ex As Exception
+
+
+            End Try
+        Next
+
+        If Refresh Then Form.Refresh()
+    End Sub
+#End Region
 
 End Module
