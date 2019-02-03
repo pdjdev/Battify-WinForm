@@ -195,7 +195,7 @@ Public Class TrayForm
                 second_str = "알 수 없는 상태"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg
 
-            Case "plugged-charg"
+            Case "plugged-charge"
                 first_str = nowPercent
                 second_str = "충전 중"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
