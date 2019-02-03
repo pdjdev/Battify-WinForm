@@ -20,6 +20,7 @@ Public Class TrayForm
 
     Private Sub EventCheck_Tick(sender As Object, e As EventArgs) Handles EventCheck.Tick
 
+
         '상황표시 폼이 있으면 디버그 모드 진입
         Dim debugmode As Boolean = Application.OpenForms().OfType(Of statusform).Any
 
@@ -34,13 +35,17 @@ Public Class TrayForm
         '충전중 - 8, 9, 10
         '충전 중이 아님(사용중) - 0, 1, 2, 4
 
+        Dim trayText As String = Nothing
+
 
         If nowPowerType = BatteryChargeStatus.NoSystemBattery Then
             '배터리 없음
             nowNotifyType = "nobat"
+            trayText = "배터리 없음"
         ElseIf nowPowerType = BatteryChargeStatus.Unknown Then
             '알수 없음
             nowNotifyType = "unknow"
+            trayText = "알 수 없음"
         End If
 
 
@@ -48,6 +53,7 @@ Public Class TrayForm
         If nowPowerType = 0 Or nowPowerType = 1 Or nowPowerType = 2 Or nowPowerType = 4 Then
 
             nowNotifyType = "using"
+            trayText = "사용 중"
 
             '충전 중이었다가 빡 뺐을때
             If 8 <= prePowerType And prePowerType <= 10 Then
@@ -61,15 +67,19 @@ Public Class TrayForm
                 Select Case nowPercent
                     Case < 5 '5퍼 이하
                         nowNotifyType = "5left"
+                        trayText = "사용 중 - 배터리 매우 부족"
 
                     Case < 15 '15퍼 이하
                         nowNotifyType = "15left"
+                        trayText = "사용 중 - 배터리 부족"
 
                     Case < 20 '20퍼 이하
-                        nowNotifyType = "20lest"
+                        nowNotifyType = "20left"
+                        trayText = "사용 중 - 배터리 부족"
 
                     Case < 30 '30퍼 이하
                         nowNotifyType = "30left"
+                        trayText = "사용 중 - 충전기 준비"
 
                     Case < 50 '50퍼 이하
                         nowNotifyType = "50left"
@@ -87,6 +97,7 @@ Public Class TrayForm
         ElseIf 8 <= nowPowerType And nowPowerType <= 10 Then
 
             nowNotifyType = "charg"
+            trayText = "충전 중"
 
             '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
             If 8 <= prePowerType And prePowerType <= 10 Then
@@ -97,12 +108,16 @@ Public Class TrayForm
 
                     Case 100
                         nowNotifyType = "100charge"
+                        trayText = "충전 완료"
 
                 End Select
 
             Else '빡 꽂은거 맞음 근데
 
-                If nowPercent = 100 Then nowNotifyType = "100charge"
+                If nowPercent = 100 Then
+                    nowNotifyType = "100charge"
+                    trayText = "충전 완료"
+                End If
 
             End If
 
@@ -110,6 +125,7 @@ Public Class TrayForm
 
         If debugmode Then statusform.Label2.Text = nowNotifyType + "/" + preNotifyType
 
+        '팝업 판별
         If Not preNotifyType = nowNotifyType Then
 
             ShowPopup()
@@ -117,6 +133,7 @@ Public Class TrayForm
 
         End If
 
+        '트레이 아이콘 숫자 표시 판별
         If Not prePercent = nowPercent Then
 
             If nowNotifyType = "nobat" Or nowNotifyType = "unknow" Then
@@ -125,8 +142,17 @@ Public Class TrayForm
                 DrawTray(nowPercent)
             End If
 
-
         End If
+
+        If nowPowerType = 128 Or nowPowerType = 255 Then
+            trayText = "?% - " + trayText
+        Else
+            trayText = nowPercent.ToString + "% - " + trayText
+        End If
+
+        If Not NotifyIcon1.Text = trayText Then NotifyIcon1.Text = trayText
+
+
 
         prePowerType = nowPowerType
         prePercent = nowPercent

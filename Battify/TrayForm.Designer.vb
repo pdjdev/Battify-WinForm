@@ -27,9 +27,9 @@ Partial Class TrayForm
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.팝업표시ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.종료ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MutesoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.종료ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,7 +40,7 @@ Partial Class TrayForm
         'NotifyIcon1
         '
         Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Text = "Battify"
         Me.NotifyIcon1.Visible = True
         '
         'ContextMenuStrip1
@@ -52,31 +52,31 @@ Partial Class TrayForm
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ContextMenuStrip1.ShowImageMargin = False
         Me.ContextMenuStrip1.ShowItemToolTips = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(156, 130)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(126, 108)
         '
         '팝업표시ToolStripMenuItem
         '
         Me.팝업표시ToolStripMenuItem.Name = "팝업표시ToolStripMenuItem"
-        Me.팝업표시ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
+        Me.팝업표시ToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.팝업표시ToolStripMenuItem.Text = "팝업 표시"
-        '
-        '종료ToolStripMenuItem
-        '
-        Me.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem"
-        Me.종료ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
-        Me.종료ToolStripMenuItem.Text = "종료"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(155, 26)
-        Me.ToolStripMenuItem1.Text = "상태 창"
         '
         'MutesoundToolStripMenuItem
         '
         Me.MutesoundToolStripMenuItem.Name = "MutesoundToolStripMenuItem"
-        Me.MutesoundToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
+        Me.MutesoundToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.MutesoundToolStripMenuItem.Text = "음소거"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(125, 26)
+        Me.ToolStripMenuItem1.Text = "상태 창"
+        '
+        '종료ToolStripMenuItem
+        '
+        Me.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem"
+        Me.종료ToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+        Me.종료ToolStripMenuItem.Text = "종료"
         '
         'TrayForm
         '
