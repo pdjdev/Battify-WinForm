@@ -108,7 +108,7 @@ Public Class TrayForm
             ElseIf nowPlugged = 1 Then
 
                 If nowPowerType >= 8 And nowPowerType <= 10 Then
-                    nowNotifyType = "plugged-charge"
+                    nowNotifyType = "plugged" '-charge"
                     trayText = "충전 중"
                 Else
                     nowNotifyType = "plugged"
@@ -128,7 +128,7 @@ Public Class TrayForm
 
                     End Select
 
-                Else '빡 꽂은거 맞음 근데
+                ElseIf prePlugged = -1 Then '빡 꽂은거 맞음 근데
 
                     If nowPercent = 100 Then
                         nowNotifyType = "100charge"
@@ -195,15 +195,15 @@ Public Class TrayForm
                 second_str = "알 수 없는 상태"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg
 
-            Case "plugged-charge"
-                first_str = nowPercent
-                second_str = "충전 중"
-                PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
-                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
-
             Case "plugged"
-                first_str = nowPercent
-                second_str = "플러그 연결됨" + vbCr + "(충전 중이 아님)"
+
+                If nowPowerType >= 8 And nowPowerType <= 10 Then
+                    first_str = nowPercent
+                    second_str = "충전 중"
+                Else
+                    first_str = nowPercent
+                    second_str = "플러그 연결됨" + vbCr + "(충전 중이 아님)"
+                End If
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
                 If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
 
