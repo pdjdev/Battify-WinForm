@@ -1,12 +1,14 @@
 ﻿Imports System.ComponentModel
 
 Public Class TrayForm
+    Dim nowPlugged As Integer = -2
     Dim nowPowerType As Integer
     Dim nowPercent As Integer
 
+    Dim prePlugged As Integer = -2
     Dim prePowerType As Integer = -1
     Dim prePercent As Integer
-    Dim prePlugged As Boolean
+
 
     Dim nowNotifyType As String = ""
     Dim preNotifyType As String = ""
@@ -24,10 +26,16 @@ Public Class TrayForm
         '상황표시 폼이 있으면 디버그 모드 진입
         Dim debugmode As Boolean = Application.OpenForms().OfType(Of statusform).Any
 
-        nowPowerType = CheckType()
-        nowPercent = Checkbatt()
+        nowPlugged = Checkplug() '전원연결여부
+        nowPowerType = CheckType() '배터리충전여부
+        nowPercent = Checkbatt() '배터리퍼센트
 
         If debugmode Then statusform.Label1.Text = "nowPowerType: " + nowPowerType.ToString + vbCr + "prePowerType: " + prePowerType.ToString
+
+        '플러그드 종류:
+        '0 - 연결 안됨 (사용중)
+        '1 - 연결됨 (연결, 연결하면서 충전)
+        '-1 - 알 수 없음
 
         '파워타이프 종류:
         '배터리 없음 - 128
@@ -38,6 +46,7 @@ Public Class TrayForm
         Dim trayText As String = Nothing
 
 
+        '[배터리의] 상태 알기
         If nowPowerType = BatteryChargeStatus.NoSystemBattery Then
             '배터리 없음
             nowNotifyType = "nobat"
@@ -46,82 +55,91 @@ Public Class TrayForm
             '알수 없음
             nowNotifyType = "unknow"
             trayText = "알 수 없음"
-        End If
+        Else
+            '이제 취급 가능한 정상적인 배터리 사용 상태
+
+            If nowPlugged = 0 Then
+
+                nowNotifyType = "using"
+                trayText = "사용 중"
+
+                '충전 중이었다가 빡 뺐을때
+                If prePlugged = 1 Then
+
+                    nowNotifyType = "unplug"
+
+                Else
+                    '걍 사용중
 
 
+                    Select Case nowPercent
+                        Case < 5 '5퍼 이하
+                            nowNotifyType = "5left"
+                            trayText = "사용 중 - 배터리 매우 부족"
 
-        If nowPowerType = 0 Or nowPowerType = 1 Or nowPowerType = 2 Or nowPowerType = 4 Then
+                        Case < 15 '15퍼 이하
+                            nowNotifyType = "15left"
+                            trayText = "사용 중 - 배터리 부족"
 
-            nowNotifyType = "using"
-            trayText = "사용 중"
+                        Case < 20 '20퍼 이하
+                            nowNotifyType = "20left"
+                            trayText = "사용 중 - 배터리 부족"
 
-            '충전 중이었다가 빡 뺐을때
-            If 8 <= prePowerType And prePowerType <= 10 Then
+                        Case < 30 '30퍼 이하
+                            nowNotifyType = "30left"
+                            trayText = "사용 중 - 충전기 준비"
 
-                nowNotifyType = "unplug"
+                        Case < 50 '50퍼 이하
+                            nowNotifyType = "50left"
 
-            Else
-                '걍 사용중
+                    End Select
+
+                    If Application.OpenForms().OfType(Of PopupForm).Any Then
+                        '팝업 켜져있을시 이거는 걍 싸그리 무시 (이전알림을 업데이트함으로써)
+                        preNotifyType = nowNotifyType
+                    End If
 
 
-                Select Case nowPercent
-                    Case < 5 '5퍼 이하
-                        nowNotifyType = "5left"
-                        trayText = "사용 중 - 배터리 매우 부족"
-
-                    Case < 15 '15퍼 이하
-                        nowNotifyType = "15left"
-                        trayText = "사용 중 - 배터리 부족"
-
-                    Case < 20 '20퍼 이하
-                        nowNotifyType = "20left"
-                        trayText = "사용 중 - 배터리 부족"
-
-                    Case < 30 '30퍼 이하
-                        nowNotifyType = "30left"
-                        trayText = "사용 중 - 충전기 준비"
-
-                    Case < 50 '50퍼 이하
-                        nowNotifyType = "50left"
-
-                End Select
-
-                If Application.OpenForms().OfType(Of PopupForm).Any Then
-                    '팝업 켜져있을시 이거는 걍 싸그리 무시 (이전알림을 업데이트함으로써)
-                    preNotifyType = nowNotifyType
                 End If
 
+            ElseIf nowPlugged = 1 Then
 
-            End If
+                If nowPowerType >= 8 And nowPowerType <= 10 Then
+                    nowNotifyType = "plugged-charge"
+                    trayText = "충전 중"
+                Else
+                    nowNotifyType = "plugged"
+                    trayText = "케이블 연결됨 (충전 중 아님)"
+                End If
 
-        ElseIf 8 <= nowPowerType And nowPowerType <= 10 Then
+                '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
+                If prePlugged = 1 Then
 
-            nowNotifyType = "charg"
-            trayText = "충전 중"
+                    Select Case nowPercent
+                        Case 50
+                            nowNotifyType = "50charge"
 
-            '안꽂았다가 빡 꽂았을때-가 아닐때 (이전-충전, 현재-충전 일시)
-            If 8 <= prePowerType And prePowerType <= 10 Then
+                        Case 100
+                            nowNotifyType = "100charge"
+                            trayText = "충전 완료"
 
-                Select Case nowPercent
-                    Case 50
-                        nowNotifyType = "50charge"
+                    End Select
 
-                    Case 100
+                Else '빡 꽂은거 맞음 근데
+
+                    If nowPercent = 100 Then
                         nowNotifyType = "100charge"
                         trayText = "충전 완료"
+                    End If
 
-                End Select
-
-            Else '빡 꽂은거 맞음 근데
-
-                If nowPercent = 100 Then
-                    nowNotifyType = "100charge"
-                    trayText = "충전 완료"
                 End If
 
             End If
 
         End If
+
+
+
 
         If debugmode Then statusform.Label2.Text = nowNotifyType + "/" + preNotifyType
 
@@ -153,7 +171,7 @@ Public Class TrayForm
         If Not NotifyIcon1.Text = trayText Then NotifyIcon1.Text = trayText
 
 
-
+        prePlugged = nowPlugged
         prePowerType = nowPowerType
         prePercent = nowPercent
 
@@ -174,11 +192,17 @@ Public Class TrayForm
                 second_str = "알 수 없는 상태"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg
 
-            Case "charg"
+            Case "plugged-charg"
                 first_str = nowPercent
                 second_str = "충전 중"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
-                If Not My.Settings.mute Then  My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
+                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
+
+            Case "plugged"
+                first_str = nowPercent
+                second_str = "플러그 연결됨" + vbCr + "(충전 중이 아님)"
+                PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
+                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
 
             Case "unplug"
                 first_str = nowPercent
