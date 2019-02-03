@@ -30,7 +30,10 @@ Public Class TrayForm
         nowPowerType = CheckType() '배터리충전여부
         nowPercent = Checkbatt() '배터리퍼센트
 
-        If debugmode Then statusform.Label1.Text = "nowPowerType: " + nowPowerType.ToString + vbCr + "prePowerType: " + prePowerType.ToString
+        If debugmode Then statusform.Label1.Text = "nowPowerType: " + nowPowerType.ToString _
+            + vbCr + "prePowerType: " + prePowerType.ToString _
+            + vbCr + "nowPlugged: " + nowPlugged.ToString _
+            + vbCr + "prePlugged: " + prePlugged.ToString
 
         '플러그드 종류:
         '0 - 연결 안됨 (사용중)
