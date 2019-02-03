@@ -71,7 +71,7 @@ Public Class TrayForm
 
                     nowNotifyType = "unplug"
 
-                Else
+                ElseIf prePlugged = 0 Then
                     '걍 사용중
 
 
@@ -128,7 +128,7 @@ Public Class TrayForm
 
                     End Select
 
-                ElseIf prePlugged = -1 Then '빡 꽂은거 맞음 근데
+                ElseIf prePlugged = 0 Then '빡 꽂은거 맞음 근데
 
                     If nowPercent = 100 Then
                         nowNotifyType = "100charge"
