@@ -21,8 +21,10 @@ Public Class TrayForm
     End Sub
 
     Private Sub EventCheck_Tick(sender As Object, e As EventArgs) Handles EventCheck.Tick
+        BattChkEvent()
+    End Sub
 
-
+    Sub BattChkEvent()
         '상황표시 폼이 있으면 디버그 모드 진입
         Dim debugmode As Boolean = Application.OpenForms().OfType(Of statusform).Any
 
@@ -141,9 +143,6 @@ Public Class TrayForm
 
         End If
 
-
-
-
         If debugmode Then statusform.Label2.Text = nowNotifyType + "/" + preNotifyType
 
         '팝업 판별
@@ -177,7 +176,6 @@ Public Class TrayForm
         prePlugged = nowPlugged
         prePowerType = nowPowerType
         prePercent = nowPercent
-
     End Sub
 
     Sub ShowPopup()
@@ -266,11 +264,18 @@ Public Class TrayForm
     End Sub
 
     Sub DrawTray(percent As Integer)
+
+        Dim args As String = Nothing
+
+        If My.Settings.color = "black" Then
+            args = "__2_"
+        End If
+
         If percent >= 0 And percent <= 100 Then
-            NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_" + percent.ToString)
+            NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_" + percent.ToString + args)
             NotifyIcon1.Visible = True
         Else
-            NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_0")
+            NotifyIcon1.Icon = My.Resources.ResourceManager.GetObject("_0" + args)
             NotifyIcon1.Visible = True
         End If
     End Sub
@@ -288,6 +293,14 @@ Public Class TrayForm
             MutesoundToolStripMenuItem.Text = "음소거"
         Else
             MutesoundToolStripMenuItem.Text = "알림 소리 활성화"
+        End If
+
+        TextcolorToolStripMenuItem.Text = "텍스트 색: "
+
+        If My.Settings.color = "black" Then
+            TextcolorToolStripMenuItem.Text += "검정"
+        Else
+            TextcolorToolStripMenuItem.Text += "하양"
         End If
     End Sub
 
@@ -314,5 +327,23 @@ Public Class TrayForm
         Else
             MutesoundToolStripMenuItem.Text = "알림 소리 활성화"
         End If
+    End Sub
+
+    Private Sub TextcolorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextcolorToolStripMenuItem.Click
+        If My.Settings.color = "white" Then
+            My.Settings.color = "black"
+        Else
+            My.Settings.color = "white"
+        End If
+
+        My.Settings.Save()
+        My.Settings.Reload()
+
+        If nowNotifyType = "nobat" Or nowNotifyType = "unknow" Then
+            DrawTray(-1)
+        Else
+            DrawTray(nowPercent)
+        End If
+
     End Sub
 End Class

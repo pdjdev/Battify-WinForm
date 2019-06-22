@@ -5,5 +5,8 @@
     <Setting Name="mute" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="color" Type="System.String" Scope="User">
+      <Value Profile="(Default)">white</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
