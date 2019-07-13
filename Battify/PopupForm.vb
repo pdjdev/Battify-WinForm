@@ -6,8 +6,8 @@ Public Class PopupForm
     Public nextstr As String = Nothing
     Dim ispercent As Boolean = True
 
-    Dim zoomfactor As Single = 1.0!
-    Dim popupMargin As Integer = 20
+    Dim zoomfactor As Double = 1.0!
+    Public popupMargin As Integer = 20
 
     Public isPopupMode As Boolean = False
     Dim modeCount As Integer = 0 '0 = 처음 텍스트 전환 / 1 = 화면 끄기
@@ -105,6 +105,7 @@ Public Class PopupForm
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        zoomfactor = My.Settings.zoomfactor
         Opacity = 0
         ZoomForm(Me, zoomfactor, False)
 
@@ -126,5 +127,9 @@ Public Class PopupForm
         If isPopupMode Then SwitchTimer.Start()
         Me.Refresh()
         FadeIn(Me, 1)
+    End Sub
+
+    Private Sub MainLabel_Click(sender As Object, e As EventArgs) Handles MainLabel.Click, Panel1.Click, BattImg.Click
+        Me.Close()
     End Sub
 End Class

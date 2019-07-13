@@ -29,8 +29,9 @@ Partial Class TrayForm
         Me.팝업표시ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MutesoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.종료ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextcolorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.종료ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.설정ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,43 +49,49 @@ Partial Class TrayForm
         '
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.White
         Me.ContextMenuStrip1.Font = New System.Drawing.Font("맑은 고딕", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.팝업표시ToolStripMenuItem, Me.MutesoundToolStripMenuItem, Me.ToolStripMenuItem1, Me.TextcolorToolStripMenuItem, Me.종료ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.팝업표시ToolStripMenuItem, Me.MutesoundToolStripMenuItem, Me.ToolStripMenuItem1, Me.TextcolorToolStripMenuItem, Me.설정ToolStripMenuItem, Me.종료ToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ContextMenuStrip1.ShowImageMargin = False
         Me.ContextMenuStrip1.ShowItemToolTips = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(156, 156)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(156, 182)
         '
         '팝업표시ToolStripMenuItem
         '
         Me.팝업표시ToolStripMenuItem.Name = "팝업표시ToolStripMenuItem"
-        Me.팝업표시ToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
+        Me.팝업표시ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.팝업표시ToolStripMenuItem.Text = "팝업 표시"
         '
         'MutesoundToolStripMenuItem
         '
         Me.MutesoundToolStripMenuItem.Name = "MutesoundToolStripMenuItem"
-        Me.MutesoundToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
+        Me.MutesoundToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.MutesoundToolStripMenuItem.Text = "음소거"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(167, 26)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(155, 26)
         Me.ToolStripMenuItem1.Text = "상태 창"
         Me.ToolStripMenuItem1.Visible = False
-        '
-        '종료ToolStripMenuItem
-        '
-        Me.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem"
-        Me.종료ToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
-        Me.종료ToolStripMenuItem.Text = "종료"
         '
         'TextcolorToolStripMenuItem
         '
         Me.TextcolorToolStripMenuItem.Name = "TextcolorToolStripMenuItem"
         Me.TextcolorToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.TextcolorToolStripMenuItem.Text = "텍스트 색: "
+        '
+        '종료ToolStripMenuItem
+        '
+        Me.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem"
+        Me.종료ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
+        Me.종료ToolStripMenuItem.Text = "종료"
+        '
+        '설정ToolStripMenuItem
+        '
+        Me.설정ToolStripMenuItem.Name = "설정ToolStripMenuItem"
+        Me.설정ToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
+        Me.설정ToolStripMenuItem.Text = "설정"
         '
         'TrayForm
         '
@@ -114,4 +121,5 @@ Partial Class TrayForm
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents MutesoundToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TextcolorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 설정ToolStripMenuItem As ToolStripMenuItem
 End Class

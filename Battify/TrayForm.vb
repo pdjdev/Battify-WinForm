@@ -37,6 +37,10 @@ Public Class TrayForm
             + vbCr + "nowPlugged: " + nowPlugged.ToString _
             + vbCr + "prePlugged: " + prePlugged.ToString
 
+        'nowPlugged = 0
+        'nowPowerType = 0
+        'nowPercent = 27
+
         '플러그드 종류:
         '0 - 연결 안됨 (사용중)
         '1 - 연결됨 (연결, 연결하면서 충전)
@@ -148,9 +152,11 @@ Public Class TrayForm
         '팝업 판별
         If Not preNotifyType = nowNotifyType Then
 
-            ShowPopup()
-            preNotifyType = nowNotifyType
+            If My.Settings.alimlist.Contains("[" + nowNotifyType + "]") Then
+                ShowPopup()
+                preNotifyType = nowNotifyType
 
+            End If
         End If
 
         '트레이 아이콘 숫자 표시 판별
@@ -203,7 +209,7 @@ Public Class TrayForm
                     second_str = "플러그 연결됨" + vbCr + "(충전 중이 아님)"
                 End If
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_charge
-                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
+                If Not My.Settings.mute And My.Settings.snd.Contains("0") Then My.Computer.Audio.Play(My.Resources.plug, AudioPlayMode.Background)
 
             Case "unplug"
                 first_str = nowPercent
@@ -244,7 +250,7 @@ Public Class TrayForm
                 first_str = nowPercent
                 second_str = "충전 완료"
                 PopupForm.BattImg.BackgroundImage = My.Resources.batt_bg_full
-                If Not My.Settings.mute Then My.Computer.Audio.Play(My.Resources.full, AudioPlayMode.Background)
+                If Not My.Settings.mute And My.Settings.snd.Contains("1") Then My.Computer.Audio.Play(My.Resources.full, AudioPlayMode.Background)
 
             Case "using"
                 first_str = nowPercent
@@ -329,6 +335,15 @@ Public Class TrayForm
         End If
     End Sub
 
+    Public Sub redaw_Tray()
+        If nowNotifyType = "nobat" Or nowNotifyType = "unknow" Then
+            DrawTray(-1)
+        Else
+            DrawTray(nowPercent)
+        End If
+    End Sub
+
+
     Private Sub TextcolorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextcolorToolStripMenuItem.Click
         If My.Settings.color = "white" Then
             My.Settings.color = "black"
@@ -338,12 +353,11 @@ Public Class TrayForm
 
         My.Settings.Save()
         My.Settings.Reload()
+        redaw_Tray()
 
-        If nowNotifyType = "nobat" Or nowNotifyType = "unknow" Then
-            DrawTray(-1)
-        Else
-            DrawTray(nowPercent)
-        End If
+    End Sub
 
+    Private Sub 설정ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 설정ToolStripMenuItem.Click
+        OptionForm.Show()
     End Sub
 End Class

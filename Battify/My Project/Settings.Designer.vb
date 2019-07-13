@@ -77,6 +77,43 @@ Namespace My
                 Me("color") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property zoomfactor() As Double
+            Get
+                Return CType(Me("zoomfactor"),Double)
+            End Get
+            Set
+                Me("zoomfactor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("01")>  _
+        Public Property snd() As String
+            Get
+                Return CType(Me("snd"),String)
+            End Get
+            Set
+                Me("snd") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("[nobat][plugged][unplug][using][5left][5charge][15left][15charge][20left][20charg"& _ 
+            "e][30left][30charge][50left][50charge][100charge]")>  _
+        Public Property alimlist() As String
+            Get
+                Return CType(Me("alimlist"),String)
+            End Get
+            Set
+                Me("alimlist") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

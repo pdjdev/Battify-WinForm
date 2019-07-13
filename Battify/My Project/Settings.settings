@@ -8,5 +8,14 @@
     <Setting Name="color" Type="System.String" Scope="User">
       <Value Profile="(Default)">white</Value>
     </Setting>
+    <Setting Name="zoomfactor" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="snd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01</Value>
+    </Setting>
+    <Setting Name="alimlist" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[nobat][plugged][unplug][using][5left][5charge][15left][15charge][20left][20charge][30left][30charge][50left][50charge][100charge]</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

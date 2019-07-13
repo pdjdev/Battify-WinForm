@@ -94,6 +94,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OptionForm.Designer.vb">
+      <DependentUpon>OptionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PopupForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="OptionForm.resx">
+      <DependentUpon>OptionForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopupForm.resx">
       <DependentUpon>PopupForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -684,6 +693,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\percent_icon\black\100 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

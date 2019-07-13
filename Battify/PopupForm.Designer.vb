@@ -89,6 +89,7 @@ Partial Class PopupForm
         Me.ClientSize = New System.Drawing.Size(250, 80)
         Me.Controls.Add(Me.MainLabel)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("맑은 고딕", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
