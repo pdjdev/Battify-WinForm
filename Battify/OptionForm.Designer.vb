@@ -515,6 +515,7 @@ Partial Class OptionForm
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.MenuPanel)
         Me.DoubleBuffered = True
+        Me.Icon = Global.Battify.My.Resources.Resources.icon
         Me.Font = New System.Drawing.Font("맑은 고딕", 9.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "OptionForm"
