@@ -697,5 +697,158 @@
   <ItemGroup>
     <None Include="Resources\closeicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\30 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\31 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\32 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\33 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\34 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\35 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\36 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\37 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\38 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\39 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\40 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\41 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\42 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\43 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\44 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\45 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\46 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\47 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\48 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\49 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\50 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\51 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\52 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\53 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\54 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\55 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\56 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\57 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\58 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\59 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\60 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\61 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\62 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\63 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\64 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\65 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\66 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\67 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\68 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\69 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\70 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\71 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\72 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\73 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\74 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\75 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\76 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\77 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\78 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\79 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent_icon\black\80 %282%29.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

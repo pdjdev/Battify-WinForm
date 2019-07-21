@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Battify [ver] - 배터리 트레이 표시/알림 프로그램
+제작: PBJSoftware (박동준)
+문의, 피드백 접수:
+텔레그램: @pbjun | 메일: pdj5096@gmail.com
+
+본 프로그램(Battify) 는 PBJ소프트웨어에서 개발하고 배포하는 무료 소프트웨어입니다.
+
+이 프로그램은 개인, 가정, 기업, 관공서, 학교, 학원 등 언제나 어디에서나 무료로 제약없이 사용 가능합니다.
+
+본 프로그램은 현재 개발중이므로 일부 기능이나 작동 등에 결함이 있을 수 있습니다. 또한 본 프로그램으로 인해 생기는 사고나 불이익은 PBJ소프트웨어 측에서 책임 져 드릴 수 없으니 참고 바랍니다.
+
+이 프로그램을 배포하실 수는 있으나, 개발자 동의를 거치지 않고 임의로 수정하거나 고치지 마시기 바랍니다. 만약 위에 대해 동의하지 않거나 설치를 원하지 않는 경우, 언제든지 설치를 중단하거나 프로그램을 제거하실 수 있습니다.
+
+*GitHub에 게시된 리포지토리는 모두 MIT 허가서를 따릅니다.
+
+Copyright (c) 2019 Dongjun Park (PBJSoftware)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</value>
+  </data>
 </root>

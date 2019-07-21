@@ -573,9 +573,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _30__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_30__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _31() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_31", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _31__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_31__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -593,9 +613,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _32__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_32__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _33() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_33", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _33__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_33__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -613,9 +653,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _34__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_34__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _35() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_35", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _35__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_35__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -633,9 +693,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _36__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_36__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _37() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_37", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _37__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_37__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -653,9 +733,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _38__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_38__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _39() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_39", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _39__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_39__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -693,9 +793,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _40__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _41() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_41", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _41__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_41__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -713,9 +833,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _42__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_42__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _43() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_43", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _43__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_43__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -733,9 +873,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _44__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_44__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _45() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_45", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _45__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_45__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -753,9 +913,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _46__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_46__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _47() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_47", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _47__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_47__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -773,9 +953,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _48__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_48__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _49() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_49", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _49__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_49__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -813,9 +1013,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _50__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_50__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _51() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_51", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _51__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_51__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -833,9 +1053,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _52__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_52__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _53() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_53", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _53__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_53__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -853,9 +1093,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _54__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_54__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _55() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_55", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _55__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_55__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -873,9 +1133,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _56__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_56__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _57() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_57", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _57__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_57__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -893,9 +1173,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _58__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_58__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _59() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_59", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _59__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_59__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -933,9 +1233,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _60__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_60__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _61() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_61", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _61__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_61__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -953,9 +1273,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _62__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_62__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _63() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_63", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _63__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_63__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -973,9 +1313,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _64__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_64__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _65() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_65", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _65__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_65__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -993,9 +1353,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _66__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_66__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _67() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_67", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _67__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_67__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1013,9 +1393,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _68__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_68__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _69() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_69", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _69__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_69__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1053,9 +1453,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _70__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_70__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _71() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_71", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _71__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_71__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1073,9 +1493,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _72__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_72__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _73() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_73", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _73__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_73__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1093,9 +1533,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _74__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_74__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _75() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_75", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _75__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_75__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1113,9 +1573,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _76__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_76__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _77() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_77", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _77__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_77__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1133,9 +1613,29 @@ Namespace My.Resources
         '''<summary>
         '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property _78__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_78__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property _79() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_79", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _79__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_79__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -1166,6 +1666,16 @@ Namespace My.Resources
         Friend ReadOnly Property _80() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("_80", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property _80__2_() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_80__2_", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property

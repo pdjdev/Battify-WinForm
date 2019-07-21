@@ -631,4 +631,157 @@
   <data name="closeicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closeicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_30__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\30 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_31__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\31 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\32 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_33__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\33 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_34__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\34 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_35__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\35 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_36__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\36 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_37__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\37 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_38__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\38 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_39__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\39 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\40 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_41__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\41 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_42__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\42 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_43__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\43 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_44__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\44 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_45__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\45 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_46__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\46 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_47__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\47 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_48__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\48 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_49__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\49 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\50 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_51__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\51 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_52__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\52 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_53__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\53 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_54__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\54 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_55__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\55 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_56__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\56 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_57__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\57 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_58__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\58 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_59__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\59 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_60__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\60 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_61__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\61 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_62__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\62 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_63__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\63 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_64__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\64 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_65__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\65 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_66__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\66 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_67__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\67 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_68__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\68 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_69__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\69 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_70__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\70 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_71__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\71 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_72__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\72 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_73__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\73 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_74__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\74 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_75__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\75 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_76__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\76 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_77__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\77 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_78__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\78 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_79__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\79 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_80__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percent_icon\black\80 (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

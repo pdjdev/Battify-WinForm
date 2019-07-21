@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Security.Principal
 
 Public Class OptionForm
 
@@ -15,6 +16,8 @@ Public Class OptionForm
 #End Region
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        RichTextBox1.Text = RichTextBox1.Text.Replace("[ver]", My.Application.Info.Version.ToString)
 
         Opacity = 0
         Dim marign As Integer = dpicalc(Me, PopupForm.popupMargin)
@@ -69,6 +72,18 @@ Public Class OptionForm
         My.Computer.Clipboard.SetText(alimlist)
         My.Settings.alimlist = alimlist
 
+        Try
+            If chk_startup.Checked Then
+                SetStartup()
+            Else
+                If checkStartUp() Then
+                    RemoveStartup()
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox("시작프로그램 설정 중 오류가 발생했습니다." + vbCr + "해당 설정을 제외한 설정은 저장됩니다.", vbCritical)
+        End Try
+
         My.Settings.mute = cka_mute.Checked
 
         Dim snd As String = Nothing
@@ -102,6 +117,7 @@ Public Class OptionForm
         If tmpchk.Contains("[50left]") Or tmpchk.Contains("[50charge]") Then ckc_7.Checked = True
         If tmpchk.Contains("[100charge]") Then ckc_8.Checked = True
 
+        chk_startup.Checked = checkStartUp()
         tmpchk = My.Settings.snd
 
         If My.Settings.mute Then cka_mute.Checked = True
@@ -154,5 +170,56 @@ Public Class OptionForm
 
     Private Sub CloseBT_MouseLeave(sender As Object, e As EventArgs)
         CloseBT.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If MsgBox("정말로 설정을 초기화하시겠습니까?", vbQuestion + vbYesNo) = vbYes Then
+            My.Settings.Reset()
+            My.Settings.Save()
+            My.Settings.Reload()
+            TrayForm.redaw_Tray()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://sw.pbj.kr/apps/battify")
+    End Sub
+
+    Public Function checkStartUp() As Boolean
+        Dim destlnk As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\Battify.lnk"
+
+        If IO.File.Exists(destlnk) Then
+            If GetTargetPath(destlnk) = Application.ExecutablePath Then
+                Return True
+            Else
+                Return False
+            End If
+        Else
+            Return False
+        End If
+    End Function
+
+    Sub SetStartup()
+        Dim Path As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\Battify.lnk"
+        Dim wsh As Object = CreateObject("WScript.Shell")
+
+        Dim MyShortcut = wsh.CreateShortcut(Path)
+        With MyShortcut
+            .TargetPath = wsh.ExpandEnvironmentStrings(Application.ExecutablePath)
+            .WindowStyle = 4
+            .Save()
+        End With
+    End Sub
+
+    '바로가기 목적지경로 리턴 2
+    Function GetTargetPath(ByVal FileName As String)
+        Dim Obj As Object = CreateObject("WScript.Shell")
+        Dim Shortcut As Object = Obj.CreateShortcut(FileName)
+        Return Shortcut.TargetPath
+    End Function
+
+    Sub RemoveStartup()
+        My.Computer.FileSystem.DeleteFile(Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\Battify.lnk")
     End Sub
 End Class

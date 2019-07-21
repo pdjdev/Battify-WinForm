@@ -22,6 +22,7 @@ Partial Class OptionForm
     '코드 편집기에서는 수정하지 마세요.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OptionForm))
         Me.MenuPanel = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,6 +56,11 @@ Partial Class OptionForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rd_cl_2 = New System.Windows.Forms.RadioButton()
         Me.rd_cl_1 = New System.Windows.Forms.RadioButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.chk_startup = New System.Windows.Forms.CheckBox()
         Me.MenuPanel.SuspendLayout()
         CType(Me.CloseBT, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -97,9 +103,9 @@ Partial Class OptionForm
         Me.Label2.Location = New System.Drawing.Point(113, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
-        Me.Label2.Size = New System.Drawing.Size(116, 41)
+        Me.Label2.Size = New System.Drawing.Size(152, 41)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "모양 설정"
+        Me.Label2.Text = "모양 설정/정보"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'CloseBT
@@ -123,19 +129,19 @@ Partial Class OptionForm
         Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
         Me.Label1.Size = New System.Drawing.Size(113, 41)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "알림 설정"
+        Me.Label1.Text = "기본 설정"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Button1)
-        Me.Panel3.Controls.Add(Me.Mode1PN)
         Me.Panel3.Controls.Add(Me.Mode2PN)
+        Me.Panel3.Controls.Add(Me.Mode1PN)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 41)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(459, 186)
+        Me.Panel3.Size = New System.Drawing.Size(459, 218)
         Me.Panel3.TabIndex = 2
         '
         'Button1
@@ -144,7 +150,7 @@ Partial Class OptionForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("맑은 고딕 Semilight", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(318, 143)
+        Me.Button1.Location = New System.Drawing.Point(318, 175)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 39)
         Me.Button1.TabIndex = 37
@@ -153,6 +159,8 @@ Partial Class OptionForm
         '
         'Mode1PN
         '
+        Me.Mode1PN.Controls.Add(Me.chk_startup)
+        Me.Mode1PN.Controls.Add(Me.Label8)
         Me.Mode1PN.Controls.Add(Me.cka_mute)
         Me.Mode1PN.Controls.Add(Me.ckc_0)
         Me.Mode1PN.Controls.Add(Me.cka_2)
@@ -170,7 +178,7 @@ Partial Class OptionForm
         Me.Mode1PN.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Mode1PN.Location = New System.Drawing.Point(0, 0)
         Me.Mode1PN.Name = "Mode1PN"
-        Me.Mode1PN.Size = New System.Drawing.Size(459, 186)
+        Me.Mode1PN.Size = New System.Drawing.Size(459, 218)
         Me.Mode1PN.TabIndex = 0
         '
         'cka_mute
@@ -179,7 +187,7 @@ Partial Class OptionForm
         Me.cka_mute.BackColor = System.Drawing.Color.Transparent
         Me.cka_mute.Font = New System.Drawing.Font("맑은 고딕", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.cka_mute.ForeColor = System.Drawing.Color.White
-        Me.cka_mute.Location = New System.Drawing.Point(235, 109)
+        Me.cka_mute.Location = New System.Drawing.Point(235, 105)
         Me.cka_mute.Margin = New System.Windows.Forms.Padding(1)
         Me.cka_mute.Name = "cka_mute"
         Me.cka_mute.Size = New System.Drawing.Size(73, 24)
@@ -207,7 +215,7 @@ Partial Class OptionForm
         Me.cka_2.BackColor = System.Drawing.Color.Transparent
         Me.cka_2.Font = New System.Drawing.Font("맑은 고딕", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.cka_2.ForeColor = System.Drawing.Color.White
-        Me.cka_2.Location = New System.Drawing.Point(175, 109)
+        Me.cka_2.Location = New System.Drawing.Point(175, 105)
         Me.cka_2.Margin = New System.Windows.Forms.Padding(1)
         Me.cka_2.Name = "cka_2"
         Me.cka_2.Size = New System.Drawing.Size(58, 24)
@@ -221,7 +229,7 @@ Partial Class OptionForm
         Me.cka_1.BackColor = System.Drawing.Color.Transparent
         Me.cka_1.Font = New System.Drawing.Font("맑은 고딕", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.cka_1.ForeColor = System.Drawing.Color.White
-        Me.cka_1.Location = New System.Drawing.Point(100, 109)
+        Me.cka_1.Location = New System.Drawing.Point(100, 105)
         Me.cka_1.Margin = New System.Windows.Forms.Padding(1)
         Me.cka_1.Name = "cka_1"
         Me.cka_1.Size = New System.Drawing.Size(73, 24)
@@ -235,7 +243,7 @@ Partial Class OptionForm
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("맑은 고딕", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(16, 116)
+        Me.Label5.Location = New System.Drawing.Point(16, 112)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 13)
         Me.Label5.TabIndex = 27
@@ -367,6 +375,9 @@ Partial Class OptionForm
         '
         'Mode2PN
         '
+        Me.Mode2PN.Controls.Add(Me.LinkLabel1)
+        Me.Mode2PN.Controls.Add(Me.RichTextBox1)
+        Me.Mode2PN.Controls.Add(Me.Label7)
         Me.Mode2PN.Controls.Add(Me.Label6)
         Me.Mode2PN.Controls.Add(Me.Label4)
         Me.Mode2PN.Controls.Add(Me.Panel4)
@@ -375,7 +386,7 @@ Partial Class OptionForm
         Me.Mode2PN.ForeColor = System.Drawing.Color.White
         Me.Mode2PN.Location = New System.Drawing.Point(0, 0)
         Me.Mode2PN.Name = "Mode2PN"
-        Me.Mode2PN.Size = New System.Drawing.Size(459, 186)
+        Me.Mode2PN.Size = New System.Drawing.Size(459, 218)
         Me.Mode2PN.TabIndex = 1
         '
         'Label6
@@ -506,18 +517,82 @@ Partial Class OptionForm
         Me.rd_cl_1.Text = "검은색"
         Me.rd_cl_1.UseVisualStyleBackColor = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("맑은 고딕", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Gray
+        Me.Label7.Location = New System.Drawing.Point(13, 116)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(33, 13)
+        Me.Label7.TabIndex = 37
+        Me.Label7.Text = "정 보"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("맑은 고딕", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.RichTextBox1.Location = New System.Drawing.Point(16, 133)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBox1.Size = New System.Drawing.Size(287, 73)
+        Me.RichTextBox1.TabIndex = 38
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("맑은 고딕", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(207, 116)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(101, 13)
+        Me.LinkLabel1.TabIndex = 39
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "새 버전 확인하기..."
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("맑은 고딕", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Gray
+        Me.Label8.Location = New System.Drawing.Point(17, 148)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.TabIndex = 32
+        Me.Label8.Text = "자 동  시 작"
+        '
+        'chk_startup
+        '
+        Me.chk_startup.AutoSize = True
+        Me.chk_startup.BackColor = System.Drawing.Color.Transparent
+        Me.chk_startup.Font = New System.Drawing.Font("맑은 고딕", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.chk_startup.ForeColor = System.Drawing.Color.White
+        Me.chk_startup.Location = New System.Drawing.Point(100, 142)
+        Me.chk_startup.Margin = New System.Windows.Forms.Padding(1)
+        Me.chk_startup.Name = "chk_startup"
+        Me.chk_startup.Size = New System.Drawing.Size(210, 24)
+        Me.chk_startup.TabIndex = 33
+        Me.chk_startup.Text = "Windows 시작시 함께 시작"
+        Me.chk_startup.UseVisualStyleBackColor = False
+        '
         'OptionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(459, 227)
+        Me.ClientSize = New System.Drawing.Size(459, 259)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.MenuPanel)
         Me.DoubleBuffered = True
-        Me.Icon = Global.Battify.My.Resources.Resources.icon
         Me.Font = New System.Drawing.Font("맑은 고딕", 9.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = Global.Battify.My.Resources.Resources.icon
         Me.Name = "OptionForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"
@@ -569,4 +644,9 @@ Partial Class OptionForm
     Friend WithEvents Button2 As Button
     Friend WithEvents ckc_0 As CheckBox
     Friend WithEvents cka_mute As CheckBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents chk_startup As CheckBox
+    Friend WithEvents Label8 As Label
 End Class

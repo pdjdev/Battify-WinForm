@@ -37,9 +37,9 @@ Public Class TrayForm
             + vbCr + "nowPlugged: " + nowPlugged.ToString _
             + vbCr + "prePlugged: " + prePlugged.ToString
 
-        'nowPlugged = 0
-        'nowPowerType = 0
-        'nowPercent = 27
+        nowPlugged = 0
+        nowPowerType = 0
+        nowPercent = 27
 
         '플러그드 종류:
         '0 - 연결 안됨 (사용중)
